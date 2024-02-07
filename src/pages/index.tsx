@@ -125,15 +125,7 @@ const links = [
     description:
       "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
     color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
+  }
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -170,11 +162,6 @@ const IndexPage: React.FC<PageProps> = () => {
               >
                 {link.text}
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
               <p style={descriptionStyle}>{link.description}</p>
             </span>
           </li>
