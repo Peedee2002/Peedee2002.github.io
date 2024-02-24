@@ -53,15 +53,16 @@ const MyExperiences = () => {
       }
     }
   `);
-  console.log(images);
   return (
     <>
       <Heading>My Experiences</Heading>
       {EXPERIENCES.map(({ title, description, photo }) => (
         <Box>
           <Heading size="md">{title}</Heading>
-          <p>{description}</p>
-          <img src={images[photo].publicURL} />
+          <Box className={styles.experienceChunk}>
+            <p className={styles.description}>{description}</p>
+            <img height={100} width={175} src={images[photo].publicURL} />
+          </Box>
         </Box>
       ))}
     </>
