@@ -4,6 +4,30 @@ import * as styles from "styles/index.module.scss";
 import PageTemplate from "components/PageTemplate";
 import { Heading, Highlight } from "@chakra-ui/react";
 
+// TODO: turn into a markdown
+export const EXPERIENCES = [
+  {
+    title: "Circles",
+    description: "",
+    photo: "circles",
+  },
+  {
+    title: "Syphon",
+    description: "",
+    photo: "syphon",
+  },
+  {
+    title: "CSESoc Hackathon",
+    description: "",
+    photo: "csesoc",
+  },
+  {
+    title: "WIT Hackathon",
+    description: "",
+    photo: "wit",
+  },
+];
+
 const BlogPage = () => {
   return (
     <PageTemplate>
@@ -12,7 +36,6 @@ const BlogPage = () => {
           Hi! I am Peter Derias.
         </Highlight>
       </Heading>
-      This page is under construction! Check back later.
     </PageTemplate>
   );
 };

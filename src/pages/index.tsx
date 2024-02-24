@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStaticQuery, type HeadFC, graphql } from "gatsby";
+import { type HeadFC } from "gatsby";
 import * as styles from "styles/index.module.scss";
 import UsefulLinks from "components/UsefulLinks";
 import PageTemplate from "components/PageTemplate";
@@ -18,10 +18,9 @@ const IndexPage = () => {
       <br />
       <p className={styles.paragraphStyles}>
         I am a full-stack engineer with experience in cloud architecture, data
-        pipelines, and DevOps tooling. I am unfortunately only *ok* at UI. I
-        have 2 years of experience working as a software engineer. Keep reading
-        for details on my experience, my interests (through my blogs) and my
-        projects!
+        pipelines, and DevOps tooling. I have 2 years of experience working as a
+        software engineer. Keep reading for details on my experience, my
+        interests (through my blogs) and my projects!
       </p>
       <MyExperiences />
     </PageTemplate>

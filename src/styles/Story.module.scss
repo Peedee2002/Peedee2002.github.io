@@ -1,0 +1,20 @@
+.experienceChunk {
+  display: flex;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.story {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
