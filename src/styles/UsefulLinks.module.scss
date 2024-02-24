@@ -1,0 +1,12 @@
+.linkBox {
+  display: flex;
+  flex-direction: row;
+  min-width: 400px;
+  max-width: 500px;
+  justify-content: space-between;
+}
+
+.image {
+  min-width: 50px;
+  min-height: 50px;
+}
