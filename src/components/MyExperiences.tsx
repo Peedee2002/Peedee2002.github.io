@@ -42,13 +42,13 @@ const MyExperiences = () => {
       nine: file(relativePath: { eq: "linkedin.svg" }) {
         publicURL
       }
-      unsw: file(relativePath: { eq: "github.png" }) {
+      unsw: file(relativePath: { eq: "github.svg" }) {
         publicURL
       }
-      resmed: file(relativePath: { eq: "resume.png" }) {
+      resmed: file(relativePath: { eq: "resume.svg" }) {
         publicURL
       }
-      csesoc: file(relativePath: { eq: "resume.png" }) {
+      csesoc: file(relativePath: { eq: "resume.svg" }) {
         publicURL
       }
     }

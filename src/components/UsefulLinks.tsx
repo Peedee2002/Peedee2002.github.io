@@ -19,10 +19,10 @@ const UsefulLinks = () => {
       linkedin: file(relativePath: { eq: "linkedin.svg" }) {
         publicURL
       }
-      github: file(relativePath: { eq: "github.png" }) {
+      github: file(relativePath: { eq: "github.svg" }) {
         publicURL
       }
-      resume: file(relativePath: { eq: "resume.png" }) {
+      resume: file(relativePath: { eq: "resume.svg" }) {
         publicURL
       }
     }
