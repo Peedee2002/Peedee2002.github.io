@@ -1,15 +1,14 @@
 import React, { PropsWithChildren } from "react";
 import * as styles from "styles/PageTemplate.module.scss";
 import Header from "components/Header";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 
 const PageTemplate = ({ children }: PropsWithChildren) => {
   return (
     <ChakraProvider>
       <main className={styles.pageStyles}>
         <Header />
-        <br />
-        {children}
+        <Box className={styles.restStyles}>{children}</Box>
       </main>
     </ChakraProvider>
   );

@@ -1,8 +1,9 @@
 .linkBox {
   display: flex;
   flex-direction: row;
-  min-width: 400px;
-  max-width: 500px;
+  width: 90vw;
+  max-width: 400px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 

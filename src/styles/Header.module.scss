@@ -1,11 +1,11 @@
 .header {
   display: flex;
   flex-direction: row;
-  padding-left: 50%;
   flex-grow: 1;
   justify-content: space-around;
   align-items: center;
-  height: 96px;
+  height: 4vw;
+  min-height: 50px;
 }
 
 .headerItem {
