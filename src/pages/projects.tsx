@@ -36,6 +36,7 @@ const BlogPage = () => {
           Hi! I am Peter Derias.
         </Highlight>
       </Heading>
+      This page is under construction! Check back later.
     </PageTemplate>
   );
 };

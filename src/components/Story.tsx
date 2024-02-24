@@ -14,7 +14,7 @@ const Story = ({ title, description, photo }: StoryProps) => {
       <Heading size="md">{title}</Heading>
       <br />
       <Box className={styles.experienceChunk}>
-        <p className={styles.description}>{description}</p>
+        <div className={styles.description}>{description}</div>
         {photo}
       </Box>
     </Box>
