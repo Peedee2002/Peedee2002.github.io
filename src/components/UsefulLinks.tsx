@@ -30,7 +30,7 @@ const UsefulLinks = () => {
   return (
     <Box className={styles.linkBox}>
       {Object.keys(LINKS).map((site) => (
-        <a href={(LINKS as any)[site]}>
+        <a key={site} href={(LINKS as any)[site]}>
           <Box>
             <img
               className={styles.image}

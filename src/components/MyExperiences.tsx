@@ -1,5 +1,4 @@
 import React from "react";
-import * as styles from "styles/MyExperiences.module.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import { Heading } from "@chakra-ui/react";
 import Story from "./Story";
@@ -17,12 +16,12 @@ export const EXPERIENCES = [
         various differing applications and tech stacks.
         <br />
         I also started and handed off a project over 1 month to re-architect a
-        data team's infrastructure in GCP by leveraging Composer and Docker, to
-        support local development and to deliver cost savings and reliability
-        improvements. This led to dramatic speedups in our development iteration
-        cycles, which would take at least 5 minutes previously. They were now a
-        minute at most. This is the project I have continued as a graduate
-        engineer.
+        data team&apos;s infrastructure in GCP by leveraging Composer and
+        Docker, to support local development and to deliver cost savings and
+        reliability improvements. This led to dramatic speedups in our
+        development iteration cycles, which would take at least 5 minutes
+        previously. They were now a minute at most. This is the project I have
+        continued as a graduate engineer.
         <br />
         Most importantly, I got to meet some incredible engineers who were
         driven by both innovation and product improvement. I was inspired by the
@@ -38,9 +37,9 @@ export const EXPERIENCES = [
     description: (
       <p>
         I designed, defended and implemented a system architecture over 6 months
-        to analyse a given team's on-call alerts. This service was infinitely
-        extensible for its clients - as they were able to create simple
-        serverless functions to enrich the data injested by my service.
+        to analyse a given team&apos;s on-call alerts. This service was
+        infinitely extensible for its clients - as they were able to create
+        simple serverless functions to enrich the data injested by my service.
         <br /> This data would then feed a dashboard, which comes with automatic
         insights and data-driven suggestions. This saved at least 2 hours weekly
         of manual data processing by senior engineers in every team that
@@ -131,6 +130,7 @@ const MyExperiences = () => {
       <Heading>My Experiences</Heading>
       {EXPERIENCES.map(({ title, description, photo }) => (
         <Story
+          key={title}
           title={title}
           description={description}
           photo={

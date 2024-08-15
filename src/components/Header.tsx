@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <Box bg="green" className={styles.header}>
       {HEADERS.map(({ name, slug }) => (
-        <div className={styles.headerItem}>
+        <div key={name} className={styles.headerItem}>
           <Link to={slug} activeStyle={{}}>
             <Button colorScheme="green">{name}</Button>
           </Link>

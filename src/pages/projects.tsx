@@ -5,7 +5,8 @@ import PageTemplate from "components/PageTemplate";
 import { Heading, Highlight } from "@chakra-ui/react";
 
 // TODO: turn into a markdown
-export const EXPERIENCES = [
+// eslint-disable-next-line
+const EXPERIENCES = [
   {
     title: "Circles",
     description: "",
