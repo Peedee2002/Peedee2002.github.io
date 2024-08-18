@@ -33,7 +33,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "static/icon.png",
       },
     },
     "gatsby-plugin-mdx",
@@ -42,7 +42,15 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "experiences",
+        path: "./experiences",
       },
       __key: "images",
     },
@@ -79,6 +87,20 @@ const config: GatsbyConfig = {
         stages: ["develop"],
         extensions: ["js", "jsx", "ts", "tsx"],
         exclude: ["node_modules", "bower_components", ".cache", "public"],
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 800,
+              wrapperStyle: `width:200px`,
+            },
+          },
+        ],
       },
     },
   ],

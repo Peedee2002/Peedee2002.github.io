@@ -11,8 +11,8 @@ export const LINKS = {
 };
 
 const UsefulLinks = () => {
-  const images = useStaticQuery(graphql`
-    query {
+  const images = useStaticQuery<Queries.UsefulLinksQuery>(graphql`
+    query UsefulLinks {
       discord: file(relativePath: { eq: "discord.svg" }) {
         publicURL
       }
@@ -29,19 +29,22 @@ const UsefulLinks = () => {
   `);
   return (
     <Box className={styles.linkBox}>
-      {Object.keys(LINKS).map((site) => (
-        <a key={site} href={(LINKS as any)[site]}>
-          <Box>
-            <img
-              className={styles.image}
-              height={50}
-              width={50}
-              src={images[site]?.publicURL}
-            />
-            {site}
-          </Box>
-        </a>
-      ))}
+      {Object.keys(LINKS).map((site) => {
+        const mysite = site as keyof typeof LINKS;
+        return (
+          <a key={site} href={LINKS[mysite]}>
+            <Box>
+              <img
+                className={styles.image}
+                height={50}
+                width={50}
+                src={images[mysite]!.publicURL || undefined}
+              />
+              {site}
+            </Box>
+          </a>
+        );
+      })}
     </Box>
   );
 };

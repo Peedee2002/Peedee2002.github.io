@@ -1,21 +1,27 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import * as styles from "styles/Story.module.scss";
 
+type FrontMatter = {
+  edited: string | null;
+  created: string | null;
+  title: string | null;
+};
 type StoryProps = {
-  title: string;
-  description: ReactNode;
-  photo: ReactNode;
+  frontmatter: FrontMatter;
+  html: string | null;
 };
 
-const Story = ({ title, description, photo }: StoryProps) => {
+const Story = ({ frontmatter, html }: StoryProps) => {
   return (
     <Box className={styles.story}>
-      <Heading size="md">{title}</Heading>
+      <Heading size="md">{frontmatter?.title}</Heading>
       <br />
       <Box className={styles.experienceChunk}>
-        <div className={styles.description}>{description}</div>
-        {photo}
+        <div
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: html || "" }}
+        />
       </Box>
     </Box>
   );

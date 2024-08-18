@@ -3,7 +3,7 @@ import * as styles from "styles/Header.module.scss";
 import { Link } from "gatsby";
 import { Box, Button } from "@chakra-ui/react";
 
-export const HEADERS = [
+const HEADERS = [
   {
     name: "Home",
     slug: "/",
