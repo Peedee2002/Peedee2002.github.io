@@ -6,13 +6,23 @@ title: "Amazon Web Services"
 
 <style>
     p {
-        padding-bottom: 15px
+        padding-bottom: 15px;
+    }
+    h3 {
+        padding-top: 5px;
+        font-size: var(--chakra-fontSizes-lg);
     }
 </style>
 
 <table>
 <tr>
 <td>
+
+### SDE 1
+
+I just started this role, I will keep you in the loop 😎
+
+### Internship
 
 I designed, defended and implemented a system architecture over 6 months to analyse a given team's on-call alerts. This service was
 infinitely extensible for its clients - as they were able to create simple serverless functions to enrich the data injested by my service.
@@ -24,7 +34,7 @@ of this cloud-based application.
 I also got a taste of working on Aurora Platform. I developed a small piece of infrastructure required for IPv6. This work aided
 multiple services running under the Aurora brand, such as Aurora Postgres and Aurora Serverless.
 
-I got to experience what it is like to be on a highly mature team full of talent - albiet often competing talent. I learned about how to
+I got to experience what it is like to be on a highly mature team full of talent - especially ones that don't often agree. I learned about how to
 ensure large-scale programs continue to be functional, healthy, and easy to maintain. I learned these best practices and am delighted to carry
 them forward throughout my career.
 

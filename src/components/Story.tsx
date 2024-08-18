@@ -16,7 +16,6 @@ const Story = ({ frontmatter, html }: StoryProps) => {
   return (
     <Box className={styles.story}>
       <Heading size="md">{frontmatter?.title}</Heading>
-      <br />
       <Box className={styles.experienceChunk}>
         <div
           className={styles.description}
