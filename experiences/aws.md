@@ -2,6 +2,7 @@
 created: "2024-02-24"
 edited: "2024-08-18"
 title: "Amazon Web Services"
+slug: /aws
 ---
 
 <style>

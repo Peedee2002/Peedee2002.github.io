@@ -6,7 +6,7 @@ import * as pageStyles from "styles/PageTemplate.module.scss";
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
     <main className={pageStyles.pageStyles}>
-      <h1 className={styles.headingStyles}>Page not found</h1>
+      <h1>Page not found</h1>
       <p className={styles.paragraphStyles}>
         Sorry 😔, we couldn&apos;t find what you were looking for.
         <br />

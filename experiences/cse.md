@@ -2,6 +2,7 @@
 created: "2023-08-01"
 edited: "2024-02-24"
 title: "UNSW Computer Science & Engineering"
+slug: /cse
 ---
 
 <style>

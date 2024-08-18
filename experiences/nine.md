@@ -2,6 +2,7 @@
 created: "2023-02-24"
 edited: "2024-08-15"
 title: "Nine Entertainment"
+slug: /nine
 ---
 
 <style>

@@ -6,7 +6,11 @@ import Story from "./Story";
 const MyExperiences = () => {
   const data = useStaticQuery<Queries.MyExperiencesQuery>(graphql`
     query MyExperiences {
-      allMarkdownRemark(limit: 2000, sort: { frontmatter: { edited: DESC } }) {
+      allMarkdownRemark(
+        limit: 2000
+        sort: { frontmatter: { edited: DESC } }
+        filter: { fileAbsolutePath: { regex: "/experiences/" } }
+      ) {
         edges {
           node {
             html

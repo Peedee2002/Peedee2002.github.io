@@ -52,7 +52,23 @@ const config: GatsbyConfig = {
         name: "experiences",
         path: "./experiences",
       },
-      __key: "images",
+      __key: "experiences",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: "./projects",
+      },
+      __key: "projects",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blogs",
+        path: "./blogs",
+      },
+      __key: "blogs",
     },
     {
       resolve: "gatsby-source-filesystem",
