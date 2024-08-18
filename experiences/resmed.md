@@ -6,13 +6,40 @@ title: "ResMed Corp"
 
 <style>
     p {
-        padding-bottom: 15px
+        padding-bottom: 15px;
+    }
+    h3 {
+        padding-top: 5px;
+        font-size: var(--chakra-fontSizes-lg);
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @media (min-width: 1000px) {
+            flex-direction: row;
+        };
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
+    .badge {
+        flex-grow: 1;
+        justify-self: center;
+        justify-content: center;
+        @media (min-width: 1000px) {
+            min-width: 20%;
+        }
+        @media (max-width: 1000px) {
+            min-width: 80%;
+        }
     }
 </style>
 
-<table>
-<tr>
-<td>
+<div class="content">
+
+<div>
+
 I developed product features using a Java micro-service back-end and Angular.js front-end with review and testing. I also developed an
 internal tool written in React and Express for observing environment health and status.
 
@@ -22,10 +49,12 @@ efficient deployments to better leverage serverless tools on AWS.
 
 More importantly however, this was my first full-time job. ResMed taught me the way a sprint work, how to review, and how to recieve reviews in a professional setting. I also learned javascript, react and angularJS on the job, teaching me how to learn and iterate quickly on new concepts. I was able to do it with the guidance of smart and patient software engineers at all levels at ResMed.
 
-</td>
-<td>
+</div>
+
+<div class="badge">
 
 ![Peter's ResMed Badge](../images/resmed.jpg)
 
-</td>
-</tr>
+</div>
+
+</div>

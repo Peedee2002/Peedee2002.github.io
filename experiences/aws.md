@@ -12,11 +12,33 @@ title: "Amazon Web Services"
         padding-top: 5px;
         font-size: var(--chakra-fontSizes-lg);
     }
+    .content {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @media (min-width: 1000px) {
+            flex-direction: row;
+        };
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
+    .badge {
+        flex-grow: 1;
+        justify-self: center;
+        justify-content: center;
+        @media (min-width: 1000px) {
+            min-width: 20%;
+        }
+        @media (max-width: 1000px) {
+            min-width: 80%;
+        }
+    }
 </style>
 
-<table>
-<tr>
-<td>
+<div class="content">
+
+<div>
 
 ### SDE 1
 
@@ -38,11 +60,12 @@ I got to experience what it is like to be on a highly mature team full of talent
 ensure large-scale programs continue to be functional, healthy, and easy to maintain. I learned these best practices and am delighted to carry
 them forward throughout my career.
 
-</td>
-<td>
+</div>
+
+<div class="badge">
 
 ![Peter's AWS badge](../images/aws.jpg)
 
-</td>
-</tr>
-</table>
+</div>
+
+</div>

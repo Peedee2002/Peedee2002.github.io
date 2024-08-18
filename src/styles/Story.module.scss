@@ -1,12 +1,6 @@
 .experienceChunk {
   display: flex;
   justify-content: space-between;
-  @media (min-width: 1200px) {
-    flex-direction: row;
-  }
-  @media (max-width: 1200px) {
-    flex-direction: column;
-  }
 }
 
 .description {
