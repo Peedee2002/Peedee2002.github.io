@@ -1,15 +1,62 @@
 import * as React from "react";
-import type { HeadFC } from "gatsby";
+import { graphql, PageProps, type HeadFC } from "gatsby";
+import * as styles from "styles/Projects.module.scss";
 import PageTemplate from "components/PageTemplate";
+import { Box, Heading } from "@chakra-ui/react";
+import PageCard from "components/PageCard";
 
-const BlogPage = () => {
+const BlogPage = ({ data }: PageProps<Queries.ProjectsQuery>) => {
   return (
     <PageTemplate>
-      This page is under construction! Check back later.
+      <Heading>My Blog</Heading>
+      <Box className={styles.projectStyles}>
+        {data.allMarkdownRemark.edges
+          .filter(({ node: { frontmatter } }) => !frontmatter!.draft)
+          .map(({ node: { frontmatter } }) => (
+            <PageCard
+              title={frontmatter!.title}
+              date={frontmatter!.date}
+              slug={frontmatter!.slug!}
+              abstract={frontmatter!.abstract}
+              frontImage={
+                frontmatter!.featuredImage?.childImageSharp?.gatsbyImageData ||
+                null
+              }
+            />
+          ))}
+      </Box>
     </PageTemplate>
   );
 };
 
 export default BlogPage;
 
-export const Head: HeadFC = () => <title>Peter Derias</title>;
+export const Head: HeadFC = () => <title>Peter's Projects!</title>;
+
+export const query = graphql`
+  query Projects {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { frontmatter: { date: DESC } }
+      filter: { fileAbsolutePath: { regex: "/blogs/" } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            slug
+            abstract
+            draft
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(width: 1000)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

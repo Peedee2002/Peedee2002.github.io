@@ -10,18 +10,20 @@ const BlogPage = ({ data }: PageProps<Queries.ProjectsQuery>) => {
     <PageTemplate>
       <Heading>My Projects</Heading>
       <Box className={styles.projectStyles}>
-        {data.allMarkdownRemark.edges.map(({ node: { frontmatter } }) => (
-          <PageCard
-            title={frontmatter!.title}
-            date={frontmatter!.date}
-            slug={"/projects" + frontmatter!.slug}
-            abstract={frontmatter!.abstract}
-            frontImage={
-              frontmatter!.featuredImage?.childImageSharp?.gatsbyImageData ||
-              null
-            }
-          />
-        ))}
+        {data.allMarkdownRemark.edges
+          .filter(({ node: { frontmatter } }) => !frontmatter!.draft)
+          .map(({ node: { frontmatter } }) => (
+            <PageCard
+              title={frontmatter!.title}
+              date={frontmatter!.date}
+              slug={frontmatter!.slug!}
+              abstract={frontmatter!.abstract}
+              frontImage={
+                frontmatter!.featuredImage?.childImageSharp?.gatsbyImageData ||
+                null
+              }
+            />
+          ))}
       </Box>
     </PageTemplate>
   );
@@ -29,7 +31,7 @@ const BlogPage = ({ data }: PageProps<Queries.ProjectsQuery>) => {
 
 export default BlogPage;
 
-export const Head: HeadFC = () => <title>Peter Derias</title>;
+export const Head: HeadFC = () => <title>Peter's Projects!</title>;
 
 export const query = graphql`
   query Projects {
@@ -46,6 +48,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             slug
             abstract
+            draft
             featuredImage {
               childImageSharp {
                 gatsbyImageData(width: 1000)
