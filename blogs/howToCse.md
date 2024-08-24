@@ -72,7 +72,7 @@ As soon as I do this, I can see all my variable values on the left, and can deci
 
 Finally, you also have the ability to work offline. This is really important, because latency is one of the most frustrating things you can have while programming. When working, the best engineers are actually **addicted** to rapid iteration cycles. That means you have the shortest loop between doing something and finding its effect. This is the best way to reach flow. Having connection or latency issues robs **yourself**, dear reader. It robs you of the real joy you can find in programming. So, you should do everything you can to code locally, and then sync it to cse easily.
 
-## Conclusion
+## **Conclusion**
 
 So, dear Reader, I hope I have convinced you to invest the time you need to making a good development environment for CSE. Please go back and read Maddy's article, which will set you up locally. The only missing feature is a way to sync between CSE and your own local machine. You can generally go without this, but if you **really** want to set this up and not think about it, there are 2 methods.
 
