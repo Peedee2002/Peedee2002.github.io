@@ -79,16 +79,18 @@ So, dear Reader, I hope I have convinced you to invest the time you need to maki
 1. Use `rsync` and `ssh` directly. These are linux commands that are already installed on your system. I use the following aliases:
 
 ```bash
+export REMOTE="z55555555@cse.unsw.edu.au"
 sync_cse () {
-    location="`pwd | sed "s?/home/$USER/??"`"
-    rsync -a "`pwd`/" z55555555@cse.unsw.edu.au:~/synced/$location
+  location="`pwd|sed "s?/home/$USER/??"`"
+  rsync -a "`pwd`/" $REMOTE:~/$location
 }
-alias cse="ssh z5555555@cse.unsw.edu.au"
+
+alias cse="ssh $REMOTE"
 ```
 
 You can put this in your `bash_aliases` file to be able to use them as commands. Make sure to replace 5555555 with your zID.
 
-This will let you run `sync_cse` to recursively sync whatever is in your current directory into the `synced` directory immediately. Pretty easy way to chuck your information into it. This is a 1-way sync however, so it assumes you will never need to code on your cse account directly.
+This will let you run `sync_cse` to recursively sync whatever is in your current directory into your home directory immediately. Pretty easy way to chuck your information into it. This is a 1-way sync however, so it assumes you will never need to code on your cse account directly. You can use the `cse` directory to drop into your CSE user shell.
 
 2. use [Unison](https://github.com/bcpierce00/unison). I am only just getting the hang of it, so I think it is best to ask you to read up on it. It does however support 2-way sync, which means you can work on any machine, invoke `unison`, and get a fresh copy of everything you need.
 
