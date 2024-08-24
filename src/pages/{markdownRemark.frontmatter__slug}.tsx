@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as styles from "styles/index.module.scss";
 import { graphql, PageProps } from "gatsby";
 import PageTemplate from "components/PageTemplate";
 import { Heading } from "@chakra-ui/layout";
@@ -14,6 +15,7 @@ export default function BlogPostTemplate({
       <Heading size="sm">{frontmatter?.date}</Heading>
       <br></br>
       <div
+        className={styles.articleStyles}
         dangerouslySetInnerHTML={{
           __html: html || "this page is under construction! Check back later.",
         }}

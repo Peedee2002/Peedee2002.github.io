@@ -26,7 +26,7 @@ const MyExperiences = () => {
   `);
   return (
     <>
-      <Heading>My Experiences</Heading>
+      <Heading>My Experiences!</Heading>
       {data.allMarkdownRemark.edges.map(({ node: { frontmatter, html } }) => (
         <Story
           key={frontmatter!.title}

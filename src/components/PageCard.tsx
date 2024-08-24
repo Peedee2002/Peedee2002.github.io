@@ -20,8 +20,8 @@ const PageCard = ({
   frontImage,
 }: PageCardProps) => {
   return (
-    <Link to={slug}>
-      <Card maxW="4xl" className={styles.card}>
+    <Link to={slug} style={{ width: "65%" }}>
+      <Card className={styles.card}>
         {frontImage && <GatsbyImage image={frontImage} alt={title + " logo"} />}
         <CardHeader fontSize={30}>{title}</CardHeader>
         <CardBody>{abstract}</CardBody>

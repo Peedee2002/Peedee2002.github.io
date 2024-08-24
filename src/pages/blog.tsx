@@ -8,7 +8,7 @@ import PageCard from "components/PageCard";
 const BlogPage = ({ data }: PageProps<Queries.ProjectsQuery>) => {
   return (
     <PageTemplate>
-      <Heading>My Blog</Heading>
+      <Heading>My Blog!</Heading>
       <Box className={styles.projectStyles}>
         {data.allMarkdownRemark.edges
           .filter(({ node: { frontmatter } }) => !frontmatter!.draft)
@@ -31,7 +31,7 @@ const BlogPage = ({ data }: PageProps<Queries.ProjectsQuery>) => {
 
 export default BlogPage;
 
-export const Head: HeadFC = () => <title>Peter's Projects!</title>;
+export const Head: HeadFC = () => <title>Peter's Blog!</title>;
 
 export const query = graphql`
   query Projects {

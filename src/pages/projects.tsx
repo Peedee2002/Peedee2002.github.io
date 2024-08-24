@@ -8,7 +8,7 @@ import PageCard from "components/PageCard";
 const BlogPage = ({ data }: PageProps<Queries.ProjectsQuery>) => {
   return (
     <PageTemplate>
-      <Heading>My Projects</Heading>
+      <Heading>My Projects!</Heading>
       <Box className={styles.projectStyles}>
         {data.allMarkdownRemark.edges
           .filter(({ node: { frontmatter } }) => !frontmatter!.draft)

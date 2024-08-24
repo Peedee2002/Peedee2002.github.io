@@ -52,3 +52,40 @@
   margin-bottom: 24px;
   margin-right: 12px;
 }
+
+.articleStyles > * {
+  padding-bottom: 0.5rem;
+}
+
+.articleStyles > h2 {
+  font-size: larger;
+  padding-bottom: 1.5rem;
+}
+
+.articleStyles > * > a:link {
+  color: #0000ee;
+}
+
+.articleStyles > * > a:visited {
+  color: #8400ff;
+}
+
+.articleStyles > * > a:link:active,
+:visited:active {
+  color: #ff0000;
+}
+
+// I can do better than this but am too lazy
+
+.articleStyles > * > * > * > a:link {
+  color: #0000ee;
+}
+
+.articleStyles > * > * > * > a:visited {
+  color: #8400ff;
+}
+
+.articleStyles > * > * > * > a:link:active,
+:visited:active {
+  color: #ff0000;
+}
