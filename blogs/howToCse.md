@@ -21,7 +21,7 @@ I was a first year tutor for 1531 - so I have seen a bunch of different _ehem_ c
 
 So, namely - what does a good setup enable?
 
-1. **Correct, incredibly helpful intellisense** 💡
+## **Correct, incredibly helpful intellisense** 💡
 
 When watching students, there are things I hear them say like "Why is my language not smart enough to know what I mean?" These remarks will follow things like:
 
@@ -52,7 +52,7 @@ You, dear student, are 100% correct in your observation! The world has long move
   ![documentation and types of function arguments are shown](../images/csedocumentation.png)
   Intellisense also lets you skip having to search documentation all the time. Instead, it will give you the documentation you need right when you need it. You cans see that `open` takes a bunch of arguments and returns a `Window`. This is really useful if you already know what is going on, because you can tell exactly what each parameter should take. If you don't know what is going on, intellisense saves the day with the `MDN Reference`, which is a hyperlink to [here](https://developer.mozilla.org/en-US/docs/Web/API/Window/open), explaining exactly what that function does! Even better, this works with the docs **you** write too. If you use the standard documentation format for your language (e.g. jsdoc), this documentation feature will work for **your own code**, and the code of your teammates. If you use this correctly, your teammates will genuinely love you.
 
-2. **Debugging** ✨
+## **Debugging** ✨
 
 Debugging is a magical and powerful tool in all codebases. Lots of people are content with print debugging, but I will tell you right now - you are missing out. Again, the power is in the **ease** and **feedback** you get. It is easy to reach for, and you get it at the **right time**. Here is an example from the [circles](https://circles.csesoc.app/) codebase.
 ![circles test suite in tabs](../images/csetestlist.png)
@@ -68,7 +68,7 @@ Then i right click the tick and click "run in debug mode":
 ![debugging demo](../images/csedebug.png)
 As soon as I do this, I can see all my variable values on the left, and can decide how quickly or slowly I traverse my program on top. Technically, all of this can be achieved using the command-line - but comes at a cost. First, you need to spend some time figuring out the right commands to run - then decide what information you want out of your run. Then, you need to run only that one specific test, which will probably already involve opening the file of the test. This lets go of a lot of "[toil](https://cloud.google.com/blog/products/management-tools/identifying-and-tracking-toil-using-sre-principles)" - meaningless work which is best eliminated to increase productivity. For a live demo of how to use the debugger, look [here](https://www.youtube.com/watch?v=3HiLLByBWkg). Remember that this is **only possible if you move off of SSHFS**.
 
-3. **the ability to work offline** 🕸️
+## **the ability to work offline** 🕸️
 
 Finally, you also have the ability to work offline. This is really important, because latency is one of the most frustrating things you can have while programming. When working, the best engineers are actually **addicted** to rapid iteration cycles. That means you have the shortest loop between doing something and finding its effect. This is the best way to reach flow. Having connection or latency issues robs **yourself**, dear reader. It robs you of the real joy you can find in programming. So, you should do everything you can to code locally, and then sync it to cse easily.
 
