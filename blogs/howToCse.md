@@ -76,7 +76,10 @@ Finally, you also have the ability to work offline. This is really important, be
 
 So, dear Reader, I hope I have convinced you to invest the time you need to making a good development environment for CSE. Please go back and read Maddy's article, which will set you up locally. The only missing feature is a way to sync between CSE and your own local machine. You can generally go without this, but if you **really** want to set this up and not think about it, there are 2 methods.
 
-1. Use `rsync` and `ssh` directly. These are linux commands that are already installed on your system. I use the following aliases:
+<ol>
+<li>
+
+Use `rsync` and `ssh` directly. These are linux commands that are already installed on your system. I use the following aliases:
 
 ```bash
 export REMOTE="z55555555@cse.unsw.edu.au"
@@ -92,6 +95,12 @@ You can put this in your `bash_aliases` file to be able to use them as commands.
 
 This will let you run `sync_cse` to recursively sync whatever is in your current directory into your home directory immediately. Pretty easy way to chuck your information into it. This is a 1-way sync however, so it assumes you will never need to code on your cse account directly. You can use the `cse` directory to drop into your CSE user shell.
 
-2. use [Unison](https://github.com/bcpierce00/unison). I am only just getting the hang of it, so I think it is best to ask you to read up on it. It does however support 2-way sync, which means you can work on any machine, invoke `unison`, and get a fresh copy of everything you need.
+</li>
+<li>
+
+use [Unison](https://github.com/bcpierce00/unison). I am only just getting the hang of it, so I think it is best to ask you to read up on it. It does however support 2-way sync, which means you can work on any machine, invoke `unison`, and get a fresh copy of everything you need.
+
+</li>
+</ol>
 
 In either case, this will be a great start in increasing your productivity and taking ownership of your process - to take control of the way you work, and giving you amazing tooling to go with it. Good luck!
