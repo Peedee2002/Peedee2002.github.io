@@ -42,7 +42,7 @@ draft: false
 
 <div>
 
-### Gradate Engineer
+### Graduate Engineer
 
 When I came back after my graduation, Nine's data team had expanded the small ambitions for local development into a new code-first approach. This involved some of my old work in local development, as well as a larger
 ambition to incorporate techniques like containerisation and IaC to create further isolation and better cloud management. I worked on documenting and provisioning project sets for
