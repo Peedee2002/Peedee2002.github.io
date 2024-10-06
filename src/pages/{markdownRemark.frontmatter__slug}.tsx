@@ -2,7 +2,7 @@ import * as React from "react";
 import * as styles from "styles/index.module.scss";
 import { graphql, PageProps } from "gatsby";
 import PageTemplate from "components/PageTemplate";
-import { Heading } from "@chakra-ui/layout";
+import { Heading } from "@chakra-ui/react";
 
 export default function BlogPostTemplate({
   data,
