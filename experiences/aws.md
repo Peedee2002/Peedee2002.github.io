@@ -49,10 +49,10 @@ I just started this role, I will keep you in the loop 😎
 ### Internship
 
 I designed, defended and implemented a system architecture over 6 months to analyse a given team's on-call alerts. This service was
-infinitely extensible for its clients - as they were able to create simple serverless functions to enrich the data injested by my service.
+infinitely extensible for its clients - as they were able to create simple serverless functions to enrich the data ingested by my service.
 
 This data would then feed a dashboard, which comes with automatic insights and data-driven suggestions. This saved at least 2 hours weekly
-of manual data processing by senior engineers in every team that onboards onto it. I owned the CI/CD, testing, monitoring, and validation
+of manual data processing by senior engineers in every team that leverages it. I owned the CI/CD, testing, monitoring, and validation
 of this cloud-based application.
 
 I also got a taste of working on Aurora Platform. I developed a small piece of infrastructure required for IPv6. This work aided

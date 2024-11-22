@@ -46,12 +46,12 @@ draft: false
 
 When I came back after my graduation, Nine's data team had expanded the small ambitions for local development into a new code-first approach. This involved some of my old work in local development, as well as a larger
 ambition to incorporate techniques like containerisation and IaC to create further isolation and better cloud management. I worked on documenting and provisioning project sets for
-teams to have their own isolated environments. This would further improve the agility of teams as they no longer need to share cloud resources (their locks, dependencies or repostories).
+teams to have their own isolated environments. This would further improve the agility of teams as they no longer need to share cloud resources (their locks, dependencies or repositories).
 
-This also segnificantly reduced complexity for any given data engineer. I worked on providing CI/CD tooling templates that can be quickly spun up by client teams, and worked on scalability concerns
-for my own team. I leveraged paralellism to reduce this concern and migrated our products to be runnable in the base environment - making sure teams can spin it up easily using their own resources.
+This also significantly reduced complexity for any given data engineer. I worked on providing CI/CD tooling templates that can be quickly spun up by client teams, and worked on scalability concerns
+for my own team. I leveraged parallelism to reduce this concern and migrated our products to be runnable in the base environment - making sure teams can spin it up easily using their own resources.
 
-In the case of shared resources like BigQuery compute slots, I aided in ensuring hygenic use by users - building a monitoring service which ensures no user is using too many resources.
+In the case of shared resources like BigQuery compute slots, I aided in ensuring hygienic use by users - building a monitoring service which ensures no user is using too many resources.
 
 Overall, I worked in the DevOps space to level up team agility. I worked directly with teams to learn and implement exactly what features they would need from Google cloud platform - and more importantly what was slowing them down. We made elegant abstractions to give them all the configuration they need, and nothing more.
 
