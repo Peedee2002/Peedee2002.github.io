@@ -55,7 +55,7 @@ More importantly however, this was my first full-time job. ResMed taught me the 
 
 <div class="badge">
 
-![Peter's ResMed Badge](../images/resmed.jpg)
+![Peter's ResMed Badge](../images/resmed.png)
 
 </div>
 

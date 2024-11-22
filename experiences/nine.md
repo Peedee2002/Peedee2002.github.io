@@ -73,7 +73,7 @@ diverse fields.
 
 <div class="badge">
 
-![Peter's Nine Badge](../images/nine.jpg)
+![Peter's Nine Badge](../images/nine.png)
 
 </div>
 

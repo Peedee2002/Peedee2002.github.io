@@ -66,7 +66,7 @@ them forward throughout my career.
 
 <div class="badge">
 
-![Peter's AWS badge](../images/aws.jpg)
+![Peter's AWS badge](../images/aws.png)
 
 </div>
 

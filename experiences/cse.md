@@ -57,7 +57,7 @@ cohesion, and express complex requirements that are suited to the experience of 
 
 <div class="badge">
 
-![Peter's UNSW Badge](../images/unsw.jpg)
+![Peter's UNSW Badge](../images/unsw.png)
 
 </div>
 
