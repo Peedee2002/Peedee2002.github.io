@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "styles/Header.module.scss";
-import { Link } from "gatsby";
+import Link from "next/link";
 import { Box, Button } from "@chakra-ui/react";
 
 const HEADERS = [
@@ -23,7 +23,7 @@ const Header = () => {
     <Box bg="green" className={styles.header}>
       {HEADERS.map(({ name, slug }) => (
         <div key={name} className={styles.headerItem}>
-          <Link to={slug} activeStyle={{}}>
+          <Link href={slug}>
             <Button colorScheme="green">{name}</Button>
           </Link>
         </div>

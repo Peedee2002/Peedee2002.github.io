@@ -1,0 +1,23 @@
+import * as React from "react";
+import * as styles from "styles/index.module.scss";
+import Link from "next/link";
+
+const NotFoundPage = () => {
+  return (
+    <>
+      <h1>Page not found</h1>
+      <p className={styles.paragraphStyles}>
+        Sorry 😔, we couldn&apos;t find what you were looking for.
+        <br />
+        <br />
+        <Link href="/">Click here to Go home</Link>.
+      </p>
+    </>
+  );
+};
+
+export default NotFoundPage;
+
+export const metadata = {
+  title: "Peter Can't find you!",
+};

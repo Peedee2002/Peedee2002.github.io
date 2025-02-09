@@ -70,8 +70,11 @@
   color: #8400ff;
 }
 
-.articleStyles > * > a:link:active,
-:visited:active {
+.articleStyles > * > a:link:active {
+  color: #ff0000;
+}
+
+.articleStyles > * > :visited:active {
   color: #ff0000;
 }
 
@@ -85,8 +88,11 @@
   color: #8400ff;
 }
 
-.articleStyles > * > * > * > a:link:active,
-:visited:active {
+.articleStyles > * > * > * > a:link:active {
+  color: #ff0000;
+}
+
+.articleStyles > * > * > * > :visited:active {
   color: #ff0000;
 }
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import { Heading } from "@chakra-ui/react";
 import Story from "./Story";
 

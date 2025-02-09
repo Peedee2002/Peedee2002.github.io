@@ -1,5 +1,4 @@
 import * as React from "react";
-import { type HeadFC } from "gatsby";
 import * as styles from "styles/index.module.scss";
 import UsefulLinks from "components/UsefulLinks";
 import PageTemplate from "components/PageTemplate";
@@ -23,4 +22,6 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Peter Derias</title>;
+export const metadata = {
+  title: "Peter Derias",
+};
