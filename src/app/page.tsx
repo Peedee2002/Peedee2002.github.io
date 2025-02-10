@@ -1,12 +1,11 @@
 import * as React from "react";
 import * as styles from "styles/index.module.scss";
 import UsefulLinks from "components/UsefulLinks";
-import PageTemplate from "components/PageTemplate";
 import MyExperiences from "components/MyExperiences";
 
 const IndexPage = () => {
   return (
-    <PageTemplate>
+    <>
       <UsefulLinks />
       <br />
       <p className={styles.paragraphStyles}>
@@ -16,7 +15,7 @@ const IndexPage = () => {
         my experience, my interests (through my blogs) and my projects!
       </p>
       <MyExperiences />
-    </PageTemplate>
+    </>
   );
 };
 

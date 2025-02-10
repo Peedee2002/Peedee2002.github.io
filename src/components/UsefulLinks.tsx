@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import { Box } from "@chakra-ui/react";
 import * as styles from "styles/UsefulLinks.module.scss";
 
@@ -11,22 +10,6 @@ export const LINKS = {
 };
 
 const UsefulLinks = () => {
-  const images = useStaticQuery<Queries.UsefulLinksQuery>(graphql`
-    query UsefulLinks {
-      discord: file(relativePath: { eq: "discord.svg" }) {
-        publicURL
-      }
-      linkedin: file(relativePath: { eq: "linkedin.svg" }) {
-        publicURL
-      }
-      github: file(relativePath: { eq: "github.svg" }) {
-        publicURL
-      }
-      resume: file(relativePath: { eq: "resume.svg" }) {
-        publicURL
-      }
-    }
-  `);
   return (
     <Box className={styles.linkBox}>
       {Object.keys(LINKS).map((site) => {
@@ -38,7 +21,7 @@ const UsefulLinks = () => {
                 className={styles.image}
                 height={50}
                 width={50}
-                src={images[mysite]!.publicURL || undefined}
+                src={`/images/links/${mysite}.svg` || undefined}
               />
               {site}
             </Box>

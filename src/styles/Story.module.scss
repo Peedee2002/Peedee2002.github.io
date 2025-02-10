@@ -13,3 +13,27 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+}
+.badge {
+  flex-grow: 1;
+  justify-self: center;
+  justify-content: center;
+  @media (min-width: 1000px) {
+    min-width: 20%;
+    max-width: 20%;
+  }
+  @media (max-width: 1000px) {
+    min-width: 80%;
+  }
+}

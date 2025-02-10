@@ -1,39 +1,22 @@
 import React from "react";
 import { Heading } from "@chakra-ui/react";
 import Story from "./Story";
+import { getData } from "@/util/getData";
 
-const MyExperiences = () => {
-  const data = useStaticQuery<Queries.MyExperiencesQuery>(graphql`
-    query MyExperiences {
-      allMarkdownRemark(
-        limit: 2000
-        sort: { frontmatter: { edited: DESC } }
-        filter: { fileAbsolutePath: { regex: "/experiences/" } }
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              title
-              created(formatString: "DD MMMM, YYYY")
-              edited(formatString: "DD MMMM, YYYY")
-            }
-          }
-        }
-      }
-    }
-  `);
+const MyExperiences = async () => {
+  const data = await getData("experiences", true);
   return (
-    <>
-      <Heading>My Experiences!</Heading>
-      {data.allMarkdownRemark.edges.map(({ node: { frontmatter, html } }) => (
+    <div>
+      <Heading key="heading">My Experiences!</Heading>
+      {data.map((e) => (
         <Story
-          key={frontmatter!.title}
-          frontmatter={frontmatter!}
-          html={html}
+          key={e.module.frontmatter.title}
+          frontmatter={e.module.frontmatter}
+          company={e.filename.substring(0, e.filename.length - 4)}
+          mdx={e.module.default({})}
         />
       ))}
-    </>
+    </div>
   );
 };
 

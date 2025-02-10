@@ -1,7 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import * as styles from "styles/Story.module.scss";
-
+import Image from "next/image";
+import { title } from "process";
 type FrontMatter = {
   edited: string | null;
   created: string | null;
@@ -9,18 +10,29 @@ type FrontMatter = {
 };
 type StoryProps = {
   frontmatter: FrontMatter;
-  html: string | null;
+  mdx: ReactNode;
+  company: string;
 };
 
-const Story = ({ frontmatter, html }: StoryProps) => {
+function capitalizeFirstLetter(string: string) {
+  return string[0].toUpperCase() + string.slice(1);
+}
+
+const Story = ({ frontmatter, mdx, company }: StoryProps) => {
   return (
     <Box className={styles.story}>
-      <Heading size="md">{frontmatter?.title}</Heading>
+      <Heading size="md">{frontmatter.title}</Heading>
       <Box className={styles.experienceChunk}>
-        <div
-          className={styles.description}
-          dangerouslySetInnerHTML={{ __html: html || "" }}
-        />
+        <div className={styles.description} />
+        <div className={styles.content}>
+          <div>{mdx}</div>
+          <div className={styles.badge}>
+            <img
+              src={`/images/experiences/${company}.png`}
+              alt={`Peter's ${capitalizeFirstLetter(company)} Badge`}
+            />
+          </div>
+        </div>
       </Box>
     </Box>
   );

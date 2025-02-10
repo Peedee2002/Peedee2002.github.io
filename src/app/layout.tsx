@@ -16,10 +16,10 @@ export default function RootLayout({
           <main className={styles.pageStyles}>
             <Header />
             <Box className={styles.restStyles}>
-              <Heading className={styles.headingStyles}>
+              <Heading key="heading" className={styles.headingStyles}>
                 Hi! I am Peter Derias.
               </Heading>
-              {children}
+              <div key="myBody">{children}</div>
             </Box>
           </main>
         </Provider>

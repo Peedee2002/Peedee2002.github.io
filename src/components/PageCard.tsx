@@ -1,7 +1,6 @@
-import { Card, CardBody, CardFooter, CardHeader } from "@chakra-ui/react";
-import { Link } from "gatsby";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import React from "react";
+import { Card } from "@chakra-ui/react";
+import Link from "next/link";
+import React, { ReactNode } from "react";
 import * as styles from "styles/PageCard.module.scss";
 
 type PageCardProps = {
@@ -9,7 +8,7 @@ type PageCardProps = {
   date: string | null;
   slug: string;
   abstract: string | null;
-  frontImage: IGatsbyImageData | null;
+  frontImage: string;
 };
 
 const PageCard = ({
@@ -20,13 +19,13 @@ const PageCard = ({
   frontImage,
 }: PageCardProps) => {
   return (
-    <Link to={slug} style={{ width: "65%" }}>
-      <Card className={styles.card}>
-        {frontImage && <GatsbyImage image={frontImage} alt={title + " logo"} />}
-        <CardHeader fontSize={30}>{title}</CardHeader>
-        <CardBody>{abstract}</CardBody>
-        <CardFooter>{date}</CardFooter>
-      </Card>
+    <Link href={slug} style={{ width: "65%" }}>
+      <Card.Root className={styles.card}>
+        {frontImage && <img src={frontImage} />}
+        <Card.Header fontSize={30}>{title}</Card.Header>
+        <Card.Body>{abstract}</Card.Body>
+        <Card.Footer>{date}</Card.Footer>
+      </Card.Root>
     </Link>
   );
 };
