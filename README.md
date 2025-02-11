@@ -1,43 +1,17 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+## Peter's Personal website!
 
-## 🚀 Quick start
+![demo of the homepage](./home.png)
 
-1.  **Create a Gatsby site.**
+This website is deployed on https://peedee2002.github.io. Have a look!
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+This website is built in Nextjs, and deployed on github pages (to save my wallet).
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+I built this website to be as easy as possible to edit, when it comes to its content. So, I have made it with MDX files as the means of generating content. This allows me to add new experiences, blogs, and projects only by creating markdown files. The routing and listing of these shown below is handled auto-magically without me having to edit any code files.
 
-2.  **Start developing.**
+![demo of the index, which is filled without me having to touch code files](./indexed-blog.png)
 
-    Navigate into your new site’s directory and start it up.
+This helps me write more, and so change my focus on either coding or writing when developing the website - not both.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+![an actual blog](./blog.png)
 
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+This website used to be built in gatsby too! There is a story to be written about that, which I will add to my blog one day.
