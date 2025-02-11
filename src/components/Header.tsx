@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "styles/Header.module.scss";
+import styles from "styles/Header.module.scss";
 import Link from "next/link";
 import { Box, Button } from "@chakra-ui/react";
 

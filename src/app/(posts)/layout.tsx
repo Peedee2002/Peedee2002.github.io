@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "styles/PageTemplate.module.scss";
+import styles from "@/styles/PageTemplate.module.scss";
 
 export default function RootLayout({
   children,

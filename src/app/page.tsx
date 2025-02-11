@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "styles/index.module.scss";
+import styles from "styles/index.module.scss";
 import UsefulLinks from "components/UsefulLinks";
 import MyExperiences from "components/MyExperiences";
 

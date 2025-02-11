@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "@/components/ui/provider";
 import { Box, Heading } from "@chakra-ui/react";
-import * as styles from "styles/PageTemplate.module.scss";
+import styles from "styles/PageTemplate.module.scss";
 import Header from "components/Header";
 
 export default function RootLayout({

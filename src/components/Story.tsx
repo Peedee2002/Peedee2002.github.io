@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Box, Heading } from "@chakra-ui/react";
-import * as styles from "styles/Story.module.scss";
+import styles from "styles/Story.module.scss";
 
 type FrontMatter = {
   edited: string | null;

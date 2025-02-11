@@ -1,7 +1,7 @@
 import { Card } from "@chakra-ui/react";
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import * as styles from "styles/PageCard.module.scss";
+import styles from "styles/PageCard.module.scss";
 
 type PageCardProps = {
   title: string | null;

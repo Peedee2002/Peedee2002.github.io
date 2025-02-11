@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import * as styles from "styles/UsefulLinks.module.scss";
+import styles from "styles/UsefulLinks.module.scss";
 
 export const LINKS = {
   github: "https://github.com/Peedee2002",

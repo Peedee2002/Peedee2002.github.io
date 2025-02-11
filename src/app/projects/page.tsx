@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "styles/Projects.module.scss";
+import styles from "styles/Projects.module.scss";
 import { Box, Heading } from "@chakra-ui/react";
 import PageCard from "components/PageCard";
 import { getData } from "@/util/getData";
