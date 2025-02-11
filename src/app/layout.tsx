@@ -16,7 +16,11 @@ export default function RootLayout({
           <main className={styles.pageStyles}>
             <Header />
             <Box className={styles.restStyles}>
-              <Heading key="heading" className={styles.headingStyles}>
+              <Heading
+                key="heading"
+                size="2xl"
+                className={styles.headingStyles}
+              >
                 Hi! I am Peter Derias.
               </Heading>
               <div key="myBody">{children}</div>

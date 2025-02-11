@@ -8,7 +8,7 @@ const BlogPage = async () => {
   const data = await getData("app/(posts)/blog");
   return (
     <>
-      <Heading>My Blog!</Heading>
+      <Heading size="4xl">My Blog!</Heading>
       <Box className={styles.projectStyles}>
         {data
           .filter(({ module: { frontmatter } }) => !frontmatter!.draft)

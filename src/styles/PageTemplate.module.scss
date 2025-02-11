@@ -15,3 +15,90 @@
   margin-bottom: 64px;
   max-width: 400px;
 }
+
+.articleStyles > * {
+  padding-bottom: 0.5rem;
+}
+
+.articleStyles > h2 {
+  padding-top: 1.5rem;
+}
+
+.articleStyles > * > a:link {
+  color: #0000ee;
+}
+
+.articleStyles > * > a:visited {
+  color: #8400ff;
+}
+
+.articleStyles > * > a:link:active {
+  color: #ff0000;
+}
+
+.articleStyles > * > a:visited:active {
+  color: #ff0000;
+}
+
+// I can do better than this but am too lazy
+
+.articleStyles > * > * > * > a:link {
+  color: #0000ee;
+}
+
+.articleStyles > * > * > * > a:visited {
+  color: #8400ff;
+}
+
+.articleStyles > * > * > * > a:link:active {
+  color: #ff0000;
+}
+.articleStyles > * > * > * > a:visited:active {
+  color: #ff0000;
+}
+
+.articleStyles > ul {
+  padding-left: 2rem;
+  list-style: disc;
+}
+
+.articleStyles > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.articleStyles > * > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.articleStyles > * > * > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.articleStyles > * > * > * > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.articleStyles > ol {
+  padding-left: 2rem;
+  list-style-type: decimal;
+}

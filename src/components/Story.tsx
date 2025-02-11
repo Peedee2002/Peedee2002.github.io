@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import * as styles from "styles/Story.module.scss";
-import Image from "next/image";
-import { title } from "process";
+
 type FrontMatter = {
   edited: string | null;
   created: string | null;
@@ -21,7 +20,7 @@ function capitalizeFirstLetter(string: string) {
 const Story = ({ frontmatter, mdx, company }: StoryProps) => {
   return (
     <Box className={styles.story}>
-      <Heading size="md">{frontmatter.title}</Heading>
+      <Heading size="xl">{frontmatter.title}</Heading>
       <Box className={styles.experienceChunk}>
         <div className={styles.description} />
         <div className={styles.content}>

@@ -7,7 +7,9 @@ const MyExperiences = async () => {
   const data = await getData("experiences", true);
   return (
     <div>
-      <Heading key="heading">My Experiences!</Heading>
+      <Heading size="4xl" key="heading">
+        My Experiences!
+      </Heading>
       {data.map((e) => (
         <Story
           key={e.module.frontmatter.title}
