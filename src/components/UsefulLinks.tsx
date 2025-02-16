@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import styles from "styles/UsefulLinks.module.scss";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 export const LINKS = {
   github: "https://github.com/Peedee2002",

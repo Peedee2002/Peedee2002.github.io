@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import styles from "styles/Story.module.scss";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 type FrontMatter = {
   edited: string | null;
