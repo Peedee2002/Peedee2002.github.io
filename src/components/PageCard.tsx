@@ -1,6 +1,7 @@
 import { Card } from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React from "react";
 import styles from "styles/PageCard.module.scss";
 
 type PageCardProps = {
@@ -21,7 +22,16 @@ const PageCard = ({
   return (
     <Link href={slug} style={{ width: "65%" }}>
       <Card.Root className={styles.card}>
-        {frontImage && <img src={frontImage} />}
+        <div>
+          {frontImage && (
+            <Image
+              width={1980}
+              height={1080}
+              src={frontImage}
+              alt={`pretty image associated with article ${title}`}
+            />
+          )}
+        </div>
         <Card.Header fontSize={30}>{title}</Card.Header>
         <Card.Body>{abstract}</Card.Body>
         <Card.Footer>{date}</Card.Footer>

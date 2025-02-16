@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import styles from "styles/UsefulLinks.module.scss";
+import Image from "next/image";
 
 export const LINKS = {
   github: "https://github.com/Peedee2002",
@@ -17,11 +18,12 @@ const UsefulLinks = () => {
         return (
           <a key={site} href={LINKS[mysite]}>
             <Box>
-              <img
+              <Image
                 className={styles.image}
                 height={50}
                 width={50}
-                src={`/images/links/${mysite}.svg` || undefined}
+                alt={`logo of ${mysite}`}
+                src={`/images/links/${mysite}.svg`}
               />
               {site}
             </Box>

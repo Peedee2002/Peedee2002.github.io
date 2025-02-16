@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import styles from "styles/Story.module.scss";
+import Image from "next/image";
 
 type FrontMatter = {
   edited: string | null;
@@ -26,7 +27,9 @@ const Story = ({ frontmatter, mdx, company }: StoryProps) => {
         <div className={styles.content}>
           <div>{mdx}</div>
           <div className={styles.badge}>
-            <img
+            <Image
+              width={3024}
+              height={4032}
               src={`/images/experiences/${company}.png`}
               alt={`Peter's ${capitalizeFirstLetter(company)} Badge`}
             />
