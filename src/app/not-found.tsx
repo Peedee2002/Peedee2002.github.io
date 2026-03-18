@@ -1,6 +1,7 @@
 import * as React from "react";
 import styles from "styles/index.module.scss";
 import Link from "next/link";
+import { Metadata } from "next";
 
 const NotFoundPage = () => {
   return (
@@ -18,6 +19,6 @@ const NotFoundPage = () => {
 
 export default NotFoundPage;
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Peter Can't find you!",
 };

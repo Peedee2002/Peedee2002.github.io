@@ -2,6 +2,7 @@ import * as React from "react";
 import styles from "styles/index.module.scss";
 import UsefulLinks from "components/UsefulLinks";
 import MyExperiences from "components/MyExperiences";
+import { Metadata } from "next";
 
 const IndexPage = () => {
   return (
@@ -21,6 +22,6 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Peter Derias",
 };
