@@ -6,12 +6,21 @@ slug: /aws
 draft: false
 ---
 
-### SDE 1
+### SDE
 
 My team is a networking team, which is responsible for the last networking layer of devices that can be seen on a `trace` call to an EC2 instance. This layer is responsible for moving traffic into
 a different group of workers which encapsulates the traffic to give the right routing information to reach your virtualised EC2 instance, given your elastic IP.
 
-My team developed a SDN controller for this layer, and I got started by building safety mechanisms into this controller. 
+My team developed a SDN controller for this layer, and I got started by building safety mechanisms into this controller. This involved designing patterns for making these prechecks and postchecks,
+creating rollback mechanisms and create extensible mechanisms which handle cross-cutting concerns. These are things like logging, error handling. This mechanism was extended by others for new concerns like
+configuration overrides to skip or alter these checks at runtime. I also ensured onboarding these prechecks and postchecks is painless by providing factories for creating
+them with full monitoring and orchestration. 
+
+I also defined, advocated for, architected and implemented a new service responsible for monitoring network devices by listening to a data source for updates to the capacity of our devices
+to carry traffic when compared to its maximum traffic. This involved listening to stakeholders including senior engineers and network engineers
+to define and implement an alert which addressed common previous issues which were hard to remediate on a device-to-device basis.
+This instead monitored traffic pathways, and alerted us if they degraded past a reasonable threshold. This service caught multiple situations which required our attention to fix, and helped improve other services
+which would unwittingly cause the underlying issues engineers discovered through the alerts.
 
 ### Internship
 
