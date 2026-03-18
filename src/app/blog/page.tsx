@@ -1,34 +1,15 @@
-import * as React from "react";
-import styles from "styles/Projects.module.scss";
-import { Box, Heading } from "@chakra-ui/react";
-import PageCard from "components/PageCard";
-import { getData } from "@/util/getData";
+import React from "react";
+import { getBlogPosts } from "@/lib/content-loader";
+import { PostList } from "@/components/PostList";
+import { Metadata } from "next";
 
 const BlogPage = async () => {
-  const data = await getData("app/(posts)/blog");
-  return (
-    <>
-      <Heading size="4xl">My Blog!</Heading>
-      <Box className={styles.projectStyles}>
-        {data
-          .filter(({ module: { frontmatter } }) => !frontmatter!.draft)
-          .map(({ module: { frontmatter } }) => (
-            <PageCard
-              key={frontmatter.title}
-              title={frontmatter.title}
-              date={frontmatter.date}
-              slug={`blog/${frontmatter.slug}`}
-              abstract={frontmatter.abstract}
-              frontImage={frontmatter.featuredImage}
-            />
-          ))}
-      </Box>
-    </>
-  );
+  const posts = await getBlogPosts();
+  return <PostList posts={posts} heading="My Blog!" slugPrefix="blog" />;
 };
 
 export default BlogPage;
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Peter's Blog!",
 };

@@ -4,9 +4,9 @@ import styles from "styles/Story.module.scss";
 import Image from "next-image-export-optimizer";
 
 type FrontMatter = {
-  edited: string | null;
-  created: string | null;
-  title: string | null;
+  edited?: string;
+  created?: string;
+  title?: string;
 };
 type StoryProps = {
   frontmatter: FrontMatter;

@@ -1,34 +1,16 @@
-import * as React from "react";
-import styles from "styles/Projects.module.scss";
-import { Box, Heading } from "@chakra-ui/react";
-import PageCard from "components/PageCard";
-import { getData } from "@/util/getData";
+import React from "react";
+import { getProjectPosts } from "@/lib/content-loader";
+import { PostList } from "@/components/PostList";
 
 const ProjectsPage = async () => {
-  const data = await getData("app/(posts)/projects");
+  const posts = await getProjectPosts();
   return (
-    <>
-      <Heading size="4xl">My Projects!</Heading>
-      <Box className={styles.projectStyles}>
-        {data
-          .filter(({ module: { frontmatter } }) => !frontmatter!.draft)
-          .map(({ module: { frontmatter } }) => (
-            <PageCard
-              key={frontmatter.title}
-              title={frontmatter.title}
-              date={frontmatter.date}
-              slug={`projects/${frontmatter.slug}`}
-              abstract={frontmatter.abstract}
-              frontImage={frontmatter.featuredImage}
-            />
-          ))}
-      </Box>
-    </>
+    <PostList posts={posts} heading="My Projects!" slugPrefix="projects" />
   );
 };
 
 export default ProjectsPage;
 
 export const metadata = {
-  title: "Peter's Blog!",
+  title: "Peter's Projects!",
 };

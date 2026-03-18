@@ -5,10 +5,10 @@ import React from "react";
 import styles from "styles/PageCard.module.scss";
 
 type PageCardProps = {
-  title: string | null;
-  date: string | null;
+  title?: string;
+  date?: string;
   slug: string;
-  abstract: string | null;
+  abstract?: string;
   frontImage: string;
 };
 
